@@ -1,0 +1,87 @@
+---
+import { Card, Pill } from "@eliancodes/brutal-ui";
+
+interface Skill {
+  name: string;
+  url: string;
+}
+
+const skills: Skill[] = [
+  {
+    name: "Astro",
+    url: "https://astro.build",
+  },
+  {
+    name: "Next.js",
+    url: "https://nextjs.org",
+  },
+  {
+    name: "React",
+    url: "https://react.dev",
+  },
+  {
+    name: "Vue",
+    url: "https://vuejs.org",
+  },
+  {
+    name: "Aspnet core",
+    url: "https://dotnet.microsoft.com/en-us/apps/aspnet",
+  },
+  {
+    name: "Docker",
+    url: "https://www.docker.com/",
+  },
+  {
+    name: "Python",
+    url: "https://www.python.org/",
+  },
+  {
+    name: "Sanity",
+    url: "https://sanity.io",
+  },
+  {
+    name: "Node.js",
+    url: "https://nodejs.org/",
+  },
+  {
+    name: "Bun",
+    url: "https://bun.sh/",
+  },
+  {
+    name: "Hono",
+    url: "https://hono.dev/",
+  },
+  {
+    name: "Tensorflow",
+    url: "https://www.tensorflow.org/",
+  },
+];
+---
+
+<section>
+  <div
+    class="grid grid-cols-2 justify-between mt-4 gap-x-2 md:flex md:space-x-4 "
+  >
+    <div class="span-cols-1 brutal-card bg-orange w-full">
+      <h1 class="md:text-6xl text-2xl font-bold">Who am I?</h1>
+      <p>Merhabalar! İstanbul Üniversitesi Ekonometri bölümü öğrencisiyim. Yaklaşık 5 yıldır yazılıma ilgim var ve kendimi bu alanda geliştirmeye çalışıyorum.</p>
+    </div>
+
+    <div class="span-cols-1 brutal-card bg-red">
+      <h1 class="md:text-4xl text-2xl font-bold">Hangi teknolojileri kullanıyorum?</h1>
+      <ul class="flex flex-wrap gap-2 p-3">
+        {
+          skills.map((skill) => (
+            <li>
+              <Pill>
+                <a href={skill.url} target="_blank">
+                  {skill.name}
+                </a>
+              </Pill>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
