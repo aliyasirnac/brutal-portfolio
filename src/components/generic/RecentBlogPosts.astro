@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
-import BlogList from '../blog/BlogList.astro';
-import { Card } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
+import { getCollection } from "astro:content";
+import BlogList from "../blog/BlogList.astro";
+import { Card } from "@eliancodes/brutal-ui";
+import { Button } from "@eliancodes/brutal-ui";
 
 interface Props {
   count?: number;
@@ -10,22 +10,22 @@ interface Props {
 
 const { count } = Astro.props;
 
-const posts = await getCollection('blog').then((posts) =>
+const posts = await getCollection("blog", (p) => !p.data.draft).then((posts) =>
   posts.reverse().slice(0, count ?? 3)
 );
 ---
 
-<section class='mt-8'>
+<section class="mt-8">
   <Card>
-    <div class='flex justify-between items-start'>
-      <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-       Son Blog Yazılarım
+    <div class="flex justify-between items-start">
+      <h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">
+        Son Blog Yazılarım
       </h2>
-      <div class='hidden md:block'>
-        <Button href='/blog/'>Blog'a git &rarr;</Button>
+      <div class="hidden md:block">
+        <Button href="/blog/">Blog'a git &rarr;</Button>
       </div>
-      <div class='block md:hidden'>
-        <Button href='/blog/'>Blog'a</Button>
+      <div class="block md:hidden">
+        <Button href="/blog/">Blog'a</Button>
       </div>
     </div>
     <BlogList posts={posts} />
