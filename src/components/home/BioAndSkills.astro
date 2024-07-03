@@ -24,7 +24,7 @@ const skills: Skill[] = [
     url: "https://vuejs.org",
   },
   {
-    name: "Aspnet core",
+    name: "Asp.NET Core",
     url: "https://dotnet.microsoft.com/en-us/apps/aspnet",
   },
   {
@@ -44,16 +44,12 @@ const skills: Skill[] = [
     url: "https://nodejs.org/",
   },
   {
-    name: "Bun",
-    url: "https://bun.sh/",
-  },
-  {
-    name: "Hono",
-    url: "https://hono.dev/",
-  },
-  {
     name: "Tensorflow",
     url: "https://www.tensorflow.org/",
+  },
+  {
+    name: "Golang",
+    url: "https://golang.org/",
   },
 ];
 ---
@@ -63,12 +59,12 @@ const skills: Skill[] = [
     class="grid grid-cols-2 justify-between mt-4 gap-x-2 md:flex md:space-x-4 "
   >
     <div class="span-cols-1 brutal-card bg-orange w-full">
-      <h1 class="md:text-6xl text-2xl font-bold">Who am I?</h1>
+      <h1 class="md:text-6xl text-2xl font-bold">Kimim, nelerle ilgilenirim?</h1>
       <p>Merhabalar! Yaklaşık 5 yıldır yazılıma ilgim var ve kendimi frontend,backend ve data science alanlarında geliştirmeye çalışıyorum. Ayrıca web scraping üzerine de kendimi geliştiriyorum.</p>
     </div>
 
     <div class="span-cols-1 brutal-card bg-red">
-      <h1 class="md:text-4xl text-2xl font-bold">Hangi teknolojileri kullanıyorum?</h1>
+      <h1 class="md:text-4xl text-2xl font-bold">İlgilendiğim Teknolojiler</h1>
       <ul class="flex flex-wrap gap-2 p-3">
         {
           skills.map((skill) => (
