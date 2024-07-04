@@ -1,6 +1,6 @@
-## Brutal Theme ##
+## Ali Yasir Naç ##
 
-All development & Content by Elian Van Cutsem
+Ali Yasir Naç tarafından geliştirilmiştir.
 
-- email: hello@elian.codes
-- website: www.elian.codes
+- email: aliyasirnac.com
+- website: www.aliyasirnac.com
