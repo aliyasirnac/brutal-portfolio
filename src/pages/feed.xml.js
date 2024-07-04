@@ -4,8 +4,9 @@ import { getCollection } from "astro:content";
 export async function GET(context) {
   const blog = await getCollection("blog", (p) => !p.data.draft);
   return rss({
-    title: "Brutal Blog",
-    description: "Brutal is a theme for Astro",
+    title: "Ali Yasir Naç",
+    description:
+      "Ali Yasir Naç'ın resmi web sitesi. Yazılım geliştirme, frontend, backend ve veri bilimi konularında bilgi ve projeler.",
     stylesheet: false,
     site: context.site,
     items: blog.map((post) => ({
@@ -13,8 +14,9 @@ export async function GET(context) {
       pubDate: post.data.pubDate,
       description: post.data.description,
       link: `/blog/${post.slug}/`,
+      tags: post.data.tags,
     })),
-    customData: "<language>en-us</language>",
-    canonicalUrl: "https://brutal.elian.codes",
+    customData: "<language>tr-tr</language>",
+    canonicalUrl: "https://aliyasirnac.com",
   });
 }

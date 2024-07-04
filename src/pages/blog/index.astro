@@ -9,9 +9,9 @@ const posts = await getCollection('blog', p => !p.data.draft).then((collection) 
 ---
 
 <Layout
-  title='Blog'
-  description='Blog | On this page you can find a collection of blogposts'
-  pageTitle='Brutal Blog'
+  title='Blog Yazılarım'
+  description='Blog | Bu sayfada blog yazılarını bulabilirsiniz.'
+  pageTitle='Blog Yazılarım'
 >
   <main class='bg-green p-6'>
     <BlogList posts={posts} />
